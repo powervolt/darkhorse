@@ -16,6 +16,10 @@ Galleria.requires(1.25, 'The Facebook Plugin requires Galleria version 1.2.5 or 
 // The script path
 var PATH = Galleria.utils.getScriptPath();
 
+// The version of the Facebook API that we are currently supporting
+// used to version the API request like https://graph.facebook.com/v2.3/REQUEST
+var FACEBOOK_API_VERSION = 'v2.3'
+
 /**
 
     @class
@@ -40,7 +44,8 @@ Galleria.Facebook = function( api_key ) {
         thumbSize: 'thumb',            // facebook album photo property for the thumbnail
         description: false,            // set this to true to get description as caption
         complete: function(){},        // callback to be called inside the Galleria.prototype.load
-        backlink: false                // set this to true if you want to pass a link back to the original image
+        backlink: false,               // set this to true if you want to pass a link back to the original image
+        facebook_access_token: ''      // access token required as of June 2015 to view public photo albums
     };
 };
 
@@ -83,11 +88,12 @@ Galleria.Facebook.prototype = {
 
     _call: function( params, callback ) {
 
-	// as of April 2013 the graph api started acting funny in Chrome and Safari because of a new user cookies scheme on Facebook
-	// read: http://stackoverflow.com/questions/16063370/facebook-graph-api-call-no-longer-works-because-of-facebook-cookies
-	// the workaround is to explicitly call the fields we're looking for on a public Facebook album
-	// fields: images, source, picture, link, name
-        var url = 'http://graph.facebook.com/' + params['album_id'] + '?callback=?' + '&fields=photos.fields(images,source,picture,link,name),photos.limit(' + this.options.max + ')';
+	// as of April 2015 the graphi API changed once again to a new syntax for limiting results and specifying fields
+	// &fields=photos.limit(40){fields,list,here}
+	// https://developers.facebook.com/docs/graph-api/using-graph-api/v2.3
+	// Thank you @wundo for the initial fix: https://github.com/aiaio/galleria-facebook/compare/master...wundo:whitespace
+	// Thank you @randomdave and @norbertFeron for your help diagnosing and solving: https://github.com/aiaio/galleria-facebook/issues/14
+	var url = 'https://graph.facebook.com/' + FACEBOOK_API_VERSION + '/' + params['album_id'] + '?callback=?' + '&fields=photos.limit(' + this.options.max + '){images,source,picture,link,name}&access_token=' + this.options.facebook_access_token
 
         var scope = this;
 
@@ -233,6 +239,12 @@ Galleria.prototype.load = function() {
         if ( typeof self._options.facebookOptions === 'object' ) {
             f.setOptions( self._options.facebookOptions );
         }
+
+	// check that we have supplied a facebook_access_token in the Galleria constructor
+	if ( !f.options.facebook_access_token ) {
+	    Galleria.raise( 'No facebook_access_token argument found. Set facebookOptions[facebook_access_token] in Galleria constructor.');
+	    return load.apply( this, args );
+	}
 
         // call the facebook method and trigger the DATA event
         f[ facebook[0] ]( facebook[1], function( data ) {

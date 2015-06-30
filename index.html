@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Dark Horse Rides</title>
+    <title>WHATEVER</title>
     <link rel="icon"
           type="image/ico"
           href="images/favicon.ico"/>
@@ -25,10 +25,17 @@
     <script type="text/javascript" src="js/tms-0.3.js"></script>
     <script type="text/javascript" src="js/tms_presets.js"></script>
     <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
         ga('create', 'UA-27754820-1', 'auto');
         ga('send', 'pageview');
@@ -46,7 +53,12 @@
                 waitBannerAnimation: false,
                 pauseOnHover: true
             });
-            $("a[data-gal^='prettyVideo']").prettyPhoto({animation_speed: 'normal', theme: 'facebook', slideshow: false, autoplay_slideshow: false});
+            $("a[data-gal^='prettyVideo']").prettyPhoto({
+                animation_speed: 'normal',
+                theme: 'facebook',
+                slideshow: false,
+                autoplay_slideshow: false
+            });
         });
     </script>
     <!--[if lt IE 7]>
@@ -64,6 +76,18 @@
     <![endif]-->
 </head>
 <body id="page1">
+<div id="fb-root"></div>
+
+<!---- Facebook Api -->
+<script>(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
 <div class="extra">
     <!--==============================header=================================-->
     <header>
@@ -94,10 +118,6 @@
             <div class="slider-wrapper">
                 <div class="slider">
                     <ul class="items">
-                        <li><img src="images/slider-images/image1.jpg" alt=""/></li>
-                        <li>
-                            <img src="images/slider-images/sara.jpg" alt=""/>
-                        </li>
                         <li>
                             <img src="images/slider-images/image3.jpg" alt=""/>
                         </li>
@@ -108,7 +128,7 @@
                             <img src="images/slider-images/image5.jpg" alt=""/>
                         </li>
                         <li>
-                            <img src="images/slider-images/michael.jpg" alt=""/>
+                            <img src="images/slider-images/image6.jpg" alt=""/>
                         </li>
                     </ul>
                 </div>
@@ -118,7 +138,7 @@
     <!--==============================content================================-->
     <section id="content">
         <div class="ic">Visit Our Facebook Page @ <a class="link" target="_blank"
-                                                     href="https://www.facebook.com/pages/Dark-Horse/168723060422/">Dark
+                                                     href="https://www.facebook.com/smlrocks/">Dark
             Horse Facebook</a></div>
         <div class="main">
             <div class="bg-2">
@@ -132,12 +152,19 @@
                                     <div class="wrapper img-indent-bot1">
                                         <div class="extra-wrap">
                                             <div class="indent-top">
-                                                Kansas City's supergroup, Dark Horse has been formed from two of KC's
-                                                premier cover bands. Audiences will quickly recognize our lead vocalist, KC's Sara Tafolla.
-                                                She is a must see performer. Sara is joined by four well-known and well-versed local artists.
-                                                An incredibly tight 5 piece; Dark Horse Entertains w/Cover hits form the 80's up. Dark Horse has
-                                                pooled the talent, experience and resources only a handful of local cover bands have attained. We know
-                                                your crowds musical tastes and we advertise heavily. KC based Dark Horse is the the go to band for your
+                                                Kansas City's supergroup, Whatever has been formed from two of KC's
+                                                premier cover bands. Audiences will quickly recognize our lead vocalist,
+                                                KC's Craig Rizo.
+                                                He is a must see performer. Craig is joined by four well-known and
+                                                well-versed local artists.
+                                                An incredibly tight 4 piece; Whatever Entertains w/Cover hits form the
+                                                80's
+                                                up. Whatever has
+                                                pooled the talent, experience and resources only a handful of local
+                                                cover bands have attained. We know
+                                                your crowds musical tastes and we advertise heavily. KC based Whatever
+                                                is the
+                                                the go to band for your
                                                 next event!
                                             </div>
                                         </div>
@@ -153,18 +180,8 @@
                                             <div class="indent-top">
                                                 <li>
                                                     <a class="link" target="_blank"
-                                                       href="http://www.reverbnation.com/musician/saratafolla">Sara
-                                                        Tafolla</a> - <strong>Lead Vocals</strong>
-                                                </li>
-                                                <li>
-                                                    <a class="link" target="_blank"
                                                        href="http://www.reverbnation.com/musician/nateleonard">Craig
                                                         Rizo</a> - <strong>Bass and Vocals</strong>
-                                                </li>
-                                                <li>
-                                                    <a class="link" target="_blank"
-                                                       href="http://www.reverbnation.com/musician/michaelsmall"> Michael
-                                                        Small </a> - <strong>Keys and Vocals</strong>
                                                 </li>
                                                 <li>
                                                     <a class="link" target="_blank"
@@ -173,10 +190,14 @@
                                                 </li>
                                                 <li>
                                                     <a class="link" target="_blank"
-                                                       href="http://www.reverbnation.com/musician/bipinbudhathoki">Bipin
-                                                        Budhathoki</a> - <strong>All guitars and stuff<strong>
+                                                       href="https://www.reverbnation.com/musician/will25">William
+                                                        Trigg</a> - <strong>Guitar and Vocals</strong>
                                                 </li>
-
+                                                <li>
+                                                    <a class="link" target="_blank"
+                                                       href="http://www.reverbnation.com/musician/bipinbudhathoki">Bipin
+                                                        Budhathoki</a> - <strong>Guitar</strong>
+                                                </li>
                                             </div>
                                         </div>
                                     </div>
@@ -185,7 +206,11 @@
                             <article class="grid_4 alpha">
                                 <div class="padding-grid-2">
                                     <h3 class="letter"><strong>Like Us On</strong> Facebook </h3>
-                                    <iframe width="100%" height="100%" frameborder="0" scrolling="no" src="http://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FDark-Horse%2F168723060422&width&layout=standard&action=like&show_faces=true&share=true&height=80"></iframe>
+
+                                    <div class="fb-like"
+                                         data-href="https://www.facebook.com/pages/Whatever-Rocks/792912270827442?fref=ts"
+                                         data-layout="standard" data-action="like" data-show-faces="true"
+                                         data-share="true"></div>
                                 </div>
                             </article>
                         </div>
@@ -199,19 +224,17 @@
                             <div class="padding-grid-1">
                                 <h3>Upcoming <strong>Events</strong></h3>
 
-                                <div class="wrapper img-indent-bot1">
-                                    <div class="widget_iframe"
-                                         style="display:inline-block;width:100%;height:360px;margin:0;padding:0;border:0;">
-                                        <iframe class="widget_iframe"
-                                                src="http://www.reverbnation.com/widget_code/html_widget/darkhorsekc?widget_id=52&amp;posted_by=musician_147058&pwc[design]=customized&pwc[background_color]=%23000000&pwc[layout]=compact&pwc[show_map]=0&pwc[size]=fit"
-                                                width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
-                                        <div class="footer_branding"
-                                             style="margin-top:-5px;font-size:10px;font-family:Arial;">
-                                            <center><a
-                                                    href="http://www.reverbnation.com/band-promotion/promoteit?utm_campaign=a_features_promote_it&utm_medium=widget&utm_source=HTML5_Show_Schedule&utm_content=widgetfooter_Promote your mixtape at ReverbNation.com"
-                                                    target="_blank" style="text-decoration:none;color:#444;">Promote
-                                                your mixtape at ReverbNation.com</a></center>
-                                        </div>
+                                <div class="widget_iframe"
+                                     style="display:inline-block;width:300px;height:300px;margin:0;padding:0;border:0;">
+                                    <iframe class="widget_iframe"
+                                            src="https://www.reverbnation.com/widget_code/html_widget/artist_4897153?widget_id=52&amp;posted_by=musician_147058&pwc[design]=customized&pwc[background_color]=%23000000&pwc[layout]=compact&pwc[show_map]=0&pwc[size]=custom"
+                                            width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
+                                    <div class="footer_branding"
+                                         style="margin-top:-5px;font-size:10px;font-family:Arial;">
+                                        <center><a
+                                                href="http://www.reverbnation.com/band-promotion/how-to-sell-music-on-itunes?utm_campaign=a_features_distribution&utm_medium=widget&utm_source=HTML5_Show_Schedule&utm_content=widgetfooter_Sell your beats online at ReverbNation.com"
+                                                target="_blank" style="text-decoration:none;color:#444;">Sell your beats
+                                            online at ReverbNation.com</a></center>
                                     </div>
                                 </div>
 
@@ -224,14 +247,14 @@
                                 <div class="widget_iframe"
                                      style="display:inline-block;width:100%;height:350px;margin:0;padding:0;border:0;">
                                     <iframe class="widget_iframe"
-                                            src="http://www.reverbnation.com/widget_code/html_widget/darkhorsekc?widget_id=51&amp;posted_by=musician_147058&pwc[design]=customized&pwc[background_color]=%23030303&pwc[size]=fit"
+                                            src="https://www.reverbnation.com/widget_code/html_widget/artist_4897153?widget_id=51&amp;posted_by=musician_147058&pwc[design]=customized&pwc[background_color]=%23000000&pwc[size]=fit"
                                             width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
                                     <div class="footer_branding"
                                          style="margin-top:-5px;font-size:10px;font-family:Arial;">
                                         <center><a
-                                                href="http://www.reverbnation.com/band-promotion/how-to-sell-music-on-itunes?utm_campaign=a_features_distribution&utm_medium=widget&utm_source=HTML5_Video_Player&utm_content=widgetfooter_Learn how to put a song on itunes at ReverbNation.com"
+                                                href="http://www.reverbnation.com/band-promotion/promoteit?utm_campaign=a_features_promote_it&utm_medium=widget&utm_source=HTML5_Video_Player&utm_content=widgetfooter_Learn how to get your music heard at ReverbNation.com"
                                                 target="_blank" style="text-decoration:none;color:#444;">Learn how to
-                                            put a song on itunes at ReverbNation.com</a></center>
+                                            get your music heard at ReverbNation.com</a></center>
                                     </div>
                                 </div>
 
@@ -242,16 +265,16 @@
                                 <h3 class="letter prev-indent-bot1">Join <strong>Us</strong></h3>
 
                                 <div class="widget_iframe"
-                                     style="display:inline-block;width:300px;height:185px;margin:0;padding:0;border:0;">
+                                     style="display:inline-block;width:100%;height:185px;margin:0;padding:0;border:0;">
                                     <iframe class="widget_iframe"
-                                            src="http://www.reverbnation.com/widget_code/html_widget/darkhorsekc?widget_id=54&amp;posted_by=musician_147058&pwc[design]=customized&pwc[background_color]=%23080708&pwc[size]=custom"
+                                            src="https://www.reverbnation.com/widget_code/html_widget/artist_4897153?widget_id=54&amp;posted_by=musician_147058&pwc[design]=customized&pwc[background_color]=%23000000&pwc[size]=custom"
                                             width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
                                     <div class="footer_branding"
                                          style="margin-top:-5px;font-size:10px;font-family:Arial;">
                                         <center><a
-                                                href="http://www.reverbnation.com/band-promotion/how-to-sell-music-on-itunes?utm_campaign=a_features_distribution&utm_medium=widget&utm_source=HTML5_Fan_Collector&utm_content=widgetfooter_Sell your beats online at ReverbNation.com"
-                                                target="_blank" style="text-decoration:none;color:#444;">Sell your beats
-                                            online at ReverbNation.com</a></center>
+                                                href="http://www.reverbnation.com/band-promotion/how-to-sell-music-on-itunes?utm_campaign=a_features_distribution&utm_medium=widget&utm_source=HTML5_Fan_Collector&utm_content=widgetfooter_Learn how to place music on itunes at ReverbNation.com"
+                                                target="_blank" style="text-decoration:none;color:#444;">Learn how to
+                                            place music on itunes at ReverbNation.com</a></center>
                                     </div>
                                 </div>
                             </div>
@@ -272,9 +295,11 @@
                     <div class="grid_12">
                         <div class="footer-padding">
                             <div class="wrapper">
-                                <span class="footer-link"><span>DarkHorse &copy; 2014</span>All Rights Reserved</span>
+                                <span class="footer-link"><span>WHATEVER &copy; 2015</span>All Rights Reserved</span>
                                 <ul class="list-services">
-                                    <li><a class="tooltips n-2" title="Facebook" href="https://www.facebook.com/pages/Dark-Horse/168723060422"></a></li>
+                                    <li><a class="tooltips n-2" title="Facebook"
+                                           href="https://www.facebook.com/pages/Whatever-Rocks/792912270827442?fref=ts"
+                                           target="_blank"></a></li>
                                     <li class="last"><a class="tooltips n-3" title="Youtube" href="#"></a></li>
                                 </ul>
                             </div>
